@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     text-align: center;
     background-image: url("background.jpg");
     background-size: cover;
@@ -17,8 +17,17 @@ header{
 }
 
 h1{
-    margin: 0;
+    color:rgb(0, 0, 0);
     font-size: 32px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 2.5;
+    padding: 20px;
+
+    background-color: #f3eeba;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 h2{
@@ -27,41 +36,32 @@ h2{
     max-width: 600px;
     margin: 0 auto 20px;
     line-height: 1.5;
+    padding: 20px;
+
+    background-color: #f3eeba;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .choices {
     display: flex;
     justify-content: center;
-    background: white;
     gap: 20px;
-    border-radius: 8px;
     margin-top: 20px;
     padding: 10px;
 }
 
-.choice-box{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border: 3px solid #5874d9;
-    border-radius: 10px;
-    background-color: white;
+.choices img{
+    width: 150px;
+    height: autopx;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
-.choice-box:hover{
-    transform: scale(1.1);
-    background-color: #738ce6
+.choices img:hover{
+    transform: scale(1.2);
 }
-
-.choice-box img{
-    width: 70px;
-    height: 70px;
-}
-
 
 #computerChoice, #result{
     font-size: 16px;
@@ -73,16 +73,17 @@ h2{
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background:#b39662;
-    color: white;
+    background:#f3eeba;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family:'Courier New', Courier, monospace;
 
     display: none;
-    margin:0;
+    margin:0 auto;
 }
 
 #playAgainBtn:hover {
-    background-color: #796744;
+    background-color: #dcd479;
 }
