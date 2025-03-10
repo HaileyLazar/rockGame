@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Rock, Paper, Scissors Game!</h1>
-        <h2>Compete against the computer! Rock > Scissors, Paper > Rock, Scissors > Paper
+        <h2>Compete against the computer! Click on an icon to select your move, and see if you beat the computer! These moves beat the other: Rock > Scissors, Paper > Rock, Scissors > Paper. Good luck!
         </h2>
         <div class="choices">
             <img src="rock.png" alt="clickable image1" id="rockBtn" onclick="playGame('rock')"/>
@@ -16,6 +16,8 @@
 
         <p id="computerChoice"></p>
         <p id="result"></p>
+
+        <img id="resultImage" src="default.png" alt="Game Result" width="300">
 
         <button id="playAgainBtn" onclick="resetGame()">Play Again!</button>
 

@@ -10,14 +10,17 @@ function playGame(userChoice) {
   let result = "";
   if (userChoice === computerChoice) {
     result = "It's a tie!";
+    changeImage("tie");
   } else if (
     (userChoice === "rock" && computerChoice === "scissors") ||
     (userChoice === "paper" && computerChoice === "rock") ||
     (userChoice === "scissors" && computerChoice === "paper")
   ) {
     result = "You win!!";
+    changeImage("win");
   } else {
     result = "You lose...";
+    changeImage("lose");
   }
 
   document.getElementById(
@@ -34,6 +37,8 @@ function resetGame() {
 
   document.getElementById("playAgainBtn").style.display = "none";
 
+  changeImage("default");
+
   if (isOriginalBackground) {
     document.body.style.backgroundImage = "url(scdBackground.jpg)";
   } else {
@@ -41,6 +46,17 @@ function resetGame() {
   }
 
   isOriginalBackground = !isOriginalBackground;
+}
+
+function changeImage(result) {
+  const resultImage = document.getElementById("resultImage");
+  if (result === "win") {
+    resultImage.src = "win.png";
+  } else if (result === "lose") {
+    resultImage.src = "lose.png";
+  } else {
+    resultImage.src = "default.png";
+  }
 }
 
 function handleKeyPress(event) {
